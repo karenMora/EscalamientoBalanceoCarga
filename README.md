@@ -1,39 +1,52 @@
-# EscalamientoBalanceoCarga
+﻿# EscalamientoBalanceoCarga
 
 # PARTE 0 ENTORNO VIRTUAL
 1. Importe la máquina virtual suministrada (extensión .ova).
 
-2. Antes de iniciar la máquina virtual, configure las redes de VirtualBox (File/Preferences/Network). Si no está configurada, agregue una red NAT (NatNework) y otra red Host-only Network (vboxnet0)
+![](img/Parte0p1.PNG)
 
-![](img/)
+2. Antes de iniciar la máquina virtual, configure las redes de VirtualBox (File/Preferences/Network). Si no está configurada, agregue una red NAT (NatNework) y otra red Host-only Network (vboxnet0)
+![](img/network.PNG)
+
+![](img/Parte0p1.PNG)
 
 3. Configure la máquina virtual (Settings/Network) y configure dos adaptadores de red. El primero de tipo 'Host-only' (asociado a la red vboxnet0), y el segundo de tipo NAT-Network (asociado a la red (NatNetwork).
+![](img/adapter.PNG)
 
-![](img/)
+![](img/Parte0p3.PNG)
 
 4. Inicie la máquina virtual y autentíquese con ubuntu / reverse .
 
-![](img/)
+![](img/Parte0p4.1.PNG)
+![](img/Parte0p4.2.PNG)
 
 5. Configure la máquina virtual para que active el segundo adaptador de red. Para eso, en la máquina virtual edite el archivo /etc/network/interfaces y agregue: "auto eth1" y "iface eth1 inet dhcp "
 
-![](img/)
+![](img/Parte0p5.PNG)
 
 6. Reinicie la máquina y verifique que la máquina tenga salida a Internet. Para esto, haga PING a un servidor desde la máquina virtual.
 
-![](img/)
+![](img/Parte0p6.0.PNG)
+![](img/Parte0p6.1.PNG)
 
 7. Verifique que la máquina virtual sea accesible desde la máquina real. Revise la dirección IP (la que empieza con 192.168.56.) de la máquina virtual (comando ifconfig), e intente hacer ping desde la máquina real a dicha dirección.
 
-![](img/)
+![](img/Parte0p7.PNG)
 
 8. Apague la máquina virtual (sudo shutdown -P 0), y ahora cree un clon de la misma (clic-derecho sobre la máquina virtual / Clone). No olvide elegir la opción de reiniciar la dirección MAC de los adaptadores de red, y haga un clonado de tipo 'Linked Clone'. Una vez clonado, rectifique que los adaptadores de red de la nueva máquina virtual tiene direcciones MAC diferentes a la máquina original.
 
-![](img/)
+![](img/Parte0p8.0.PNG)
+![](img/Parte0p8.1.PNG)
+![](img/Parte0p8.2.PNG)
+![](img/Parte0p8.3.PNG)
+![](img/Parte0p8.4.PNG)
+![](img/Parte0p8.5.PNG)
 
 9. Inicie ambas máquinas y verifique que queden con sus respectivas direcciones, y que éstas sean accesibles. Una vez verificado esto, puede conectarse a las máquinas virtuales a través de ssh (para no tener que usar la terminal de la máquina virtual): "ssh ubuntu@192.168.56.XX"
 
-![](img/)
+![](img/Parte0p9.0.PNG)
+![](img/Parte0p9.1.PNG)
+
 
 # parte 1
 
