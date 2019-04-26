@@ -186,15 +186,17 @@ En su ejercicio, haga una rama llamada 'cloud-based-mom'. En ésta, configure su
 
 ![](img/)
 
+
+
 # Parte 4(Para el martes en clase impreso)
 
 1. Haga el diagrama de despliegue (incluyendo el detalle de los componentes de cada servidor) para la versión original del laboratorio.
 
-![](img/)
+![](img/Parte4p1.PNG)
 
 2. Haga el diagrama de despliegue (incluyendo el detalle de componentes) para la nueva versión del laboratrio. En este caso suponga que los servidores no están en máquinas virtuales sino en máquinas reales.
 
-![](img/)
+![](img/Parte4p2.PNG)
 
 3. Analice e indique, con la nueva arquitectura planteada qué problemas o inconsistencias se podrían presentar con la aplicación?. Qué solución plantearía al respecto?
 
